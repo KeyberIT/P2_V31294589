@@ -160,60 +160,12 @@
                 </div>
             </div>
         </section>
-
-        <!-- Contacto -->
-        <section class="contacto" id="contacto">
-            <h1 data-section="contacto" data-value="title" data-aos="fade-up">Contacto</h1>
-
-            <div class="container_box--contacto" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
-    
-                <div class="container--contacto">
-                    <div class="container_text--contacto">
-                        <p data-section="contacto" data-value="text">Completa el siguiente formulario y me pondré en contacto contigo lo antes posible.</p>
-                    </div>
-    
-                    <form id="form" class="form-contact" name="contacto-portafolio" netlify>
-                        <input id="nombre" type="text" name="name" placeholder="Nombre | Name" required>
-                        <input id="email" type="email" name="email" placeholder="E-mail" required>
-                        <input id="asunto" type="text" name="affair" placeholder="Asunto | Subject" required>
-                        <textarea id="mensaje" cols="20" rows="4" name="message" placeholder="Mensaje | Message" required></textarea>
-    
-                        <div class="btn_form--contacto">
-                            <button id="btn-enviar" type="submit" data-section="contacto" data-value="btn-enviar">Enviar</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
+      
+            
+        
     <footer>
-        <div class="contianer--footer">
-            <div class="container_redes-footer">
-                </a>
-                <a href="https://github.com/KeyberIT" target="_blank">
-                    <img src="./images/icon-github.png" alt="GitHub">
-                </a>
-                <a href="https://www.instagram.com/keyber62/" target="_blank">
-                    <img src="./images/icon-instagram.png" alt="Instagram"">
-                </a>
-            </div>
-
-            <div class="container_text--footer">
-                <span>Copyright © | Coded with</span>
-                <img src="./images/icon-corazon.png" alt="Corazón">
-                <span>by</span>
-                <span><%=name%></span>
-            </div>
-        </div>
-    </footer>
-
-    <div class="go-top-container">
-        <div class="go-top-button">
-            <i class="fas fa-chevron-up"></i>
-        </div>
-    </div>
-
+        <%- include('./components/contacto.ejs') %>
+        
     <!-- Archivo Js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -225,4 +177,5 @@
     <!-- Mi script -->
     <script src="./javascripts/script.js"></script>
 </body>
+
 </html>

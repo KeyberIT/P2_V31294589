@@ -630,7 +630,7 @@ img.logo {
     line-height: 2.3rem;
 }
 
-.form-contact input {
+.formulario-contacto input {
     font-family: 'Cooper Hewitt';
     background: transparent;
     border: 1px solid var(--light-grey);
@@ -644,16 +644,16 @@ img.logo {
     letter-spacing: 1px;
 }
 
-.form-contact input::placeholder {
+.formulario-contacto input::placeholder {
     color: var(--light-grey);
 }
 
-.form-contact .input-invalid {
+.formulario-contacto .input-invalid {
     border: 1px solid #574438;
     color: #574438;
 }
 
-.form-contact textarea {
+.formulario-contacto textarea {
     background: transparent;
     border: 1px solid var(--light-grey);
     font-family: 'Cooper Hewitt';
@@ -668,20 +668,20 @@ img.logo {
     resize: none;
 }
 
-.form-contact textarea::placeholder {
+.formulario-contacto textarea::placeholder {
     color: var(--light-grey);
 }
 
-.form-contact textarea::-webkit-scrollbar {
+.formulario-contacto textarea::-webkit-scrollbar {
     width: 8px;
 }
 
-.form-contact textarea::-webkit-scrollbar-track {
+.formulario-contacto textarea::-webkit-scrollbar-track {
     background-color: #776254;
 }
 
 
-.form-contact textarea::-webkit-scrollbar-thumb {
+.formulario-contacto textarea::-webkit-scrollbar-thumb {
     background-color: #574438;
 }
 
