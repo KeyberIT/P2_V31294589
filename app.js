@@ -1,11 +1,13 @@
 
 var createError = require('http-errors');
 var express = require('express');
-var path = require('path');
 var cookieParser = require('cookie-parser');
 const nodemailer = require('nodemailer');
+const session = require('express-session');
 var logger = require('morgan');
 const http = require('http');
+var path = require('path');
+const passport = require('passport');
 const port = 5000;
 
 
@@ -13,6 +15,10 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+app.use(session({secret:"cats"}));
+app.use(passport.initialize());
+app.use(passport.session());
+
 const server = http.createServer(app);
 /* const db = require('./conf/db'); */
 const ContactosController = require('./controllers/ContactosController');

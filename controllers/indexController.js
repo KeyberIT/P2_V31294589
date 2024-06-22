@@ -1,4 +1,6 @@
 const axios = require('axios');
+const ContactosModel = require("../models/ContactosModel");
+const models = new ContactosModel();
 const toIndex = (req, res, next) => {
   res.render("index", { title: "Express" });
 };
@@ -15,7 +17,7 @@ const ubicacion = async (req, res) => {
   }
   const config = {
   headers: {
-    'Referer': 'https://curriculum.com', // Establece el Referer personalizado
+    'Referer': 'https://curriculum-upeh.onrender.com', // Establece el Referer personalizado
     'User-Agent': 'curriculumVitae' // Establece el User-Agent personalizado
   },
   timeout: 60000 // 60 segundos
@@ -31,8 +33,14 @@ const ubicacion = async (req, res) => {
   }
 };
 
+const protected = async (req,res)=>{
+const datos = await models.obtenerAllContactos();
+ res.render('contactos',{datos});
+}
+
 module.exports = {
   toIndex,
-  ubicacion
+  ubicacion,
+  protected
 }
 

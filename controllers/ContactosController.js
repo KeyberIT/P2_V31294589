@@ -32,9 +32,9 @@ class ContactosController {
 
     // Guardar los datos del formulario
     const ip = req.ip;
-    const fecha = new Date().toISOString();
+    //const fecha = new Date().toISOString();
 
-    const respuesta = await this.contactosModel.crearContacto(email, name, mensaje, ip, fecha,pais);
+    const respuesta = await this.contactosModel.crearContacto(email, name, mensaje, ip,pais);
 
      const mailOptions = {
     from:'programacionjavascript9@gmail.com',
@@ -43,7 +43,6 @@ class ContactosController {
     text: `Datos del usuario:\n\n
            Nombre: ${name}\n
            Email: ${email}\n
-           Fecha: ${fecha}\n
            Comentario: ${mensaje}\n
            ip: ${ip}\n
            pais: ${pais}\n`
