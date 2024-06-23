@@ -15,7 +15,7 @@ const ubicacion = async (req, res) => {
   }
   const config = {
   headers: {
-    'Referer': 'https://curriculum.com', // Establece el Referer personalizado
+    'Referer': 'https://p2-v31294589-3.onrender.com/', // Establece el Referer personalizado
     'User-Agent': 'curriculumVitae' // Establece el User-Agent personalizado
   },
   timeout: 60000 // 60 segundos
