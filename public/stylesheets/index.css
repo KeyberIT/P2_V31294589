@@ -513,6 +513,150 @@ span+span {
     margin-bottom: .7rem;
 }
 
+/* Proyectos */
+
+.proyectos {
+    min-height: 100vh;
+    padding: 5rem 0;
+    background-color: var(--eerie-black);
+}
+
+.proyectos h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    color: var(--white);
+}
+
+.cards_container--proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0 5%;
+}
+
+.card--proyecto {
+    background: var(--jet);
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 35rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card--proyecto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card--proyecto-img {
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    overflow: hidden;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card--proyecto-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    background-color: #000;
+    display: block;
+    opacity: 0.95;
+}
+
+.card--proyecto:hover .card--proyecto-img img {
+    transform: scale(1.03);
+    opacity: 1;
+    filter: brightness(1.05);
+}
+
+
+.card--proyecto:first-child .card--proyecto-img {
+    background-color: #000; /* Fondo negro para mejor contraste */
+    padding: 0; /* Eliminamos el padding para que ocupe todo el espacio */
+}
+
+.card--proyecto:first-child .card--proyecto-img img {
+    object-fit: cover; /* La imagen cubrirá todo el espacio */
+    object-position: center; /* Centramos la imagen */
+    width: 105%;
+    height: 105%;
+    padding: 0; /* Eliminamos cualquier padding */
+}
+
+.card--proyecto-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card--proyecto:hover .card--proyecto-overlay {
+    opacity: 1;
+}
+
+.btn-visitar {
+    padding: 1rem 2rem;
+    background: var(--beaver);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-visitar:hover {
+    background: var(--white);
+    color: var(--jet);
+    transform: translateY(-3px);
+}
+
+.card--proyecto-content {
+    padding: 2rem;
+}
+
+.card--proyecto-content h3 {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.card--proyecto-content p {
+    color: var(--light-grey);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.tecnologias span {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--beaver);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
 /* Formación */
 
 .formacion {
@@ -546,15 +690,23 @@ span+span {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 32rem;
-    height: 33rem;
-    margin: 0 1rem 2rem 1rem;
-    padding: 1rem;
+    width: 35rem;
+    height: 38rem;
+    margin: 0 1.5rem 2.5rem 1.5rem;
+    padding: 1.5rem;
     justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.cards--formacion:hover {
+    transform: translateY(-5px);
 }
 
 .cards--formacion img {
-    width: 25rem;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px;
 }
 
 .container_texto--formacion {

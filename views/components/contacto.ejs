@@ -75,20 +75,27 @@
         mensajeConfirmacion.textContent = "¡Formulario enviado con éxito!";
 
         // Muestra una alerta emergente
-        alert("¡Formulario enviado con éxito!");
+        // alert("¡Formulario enviado con éxito!");
 
         // Envía el formulario manualmente utilizando AJAX
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "/form-contacto", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.onreadystatechange = function() {
-            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-                console.log("Formulario enviado");
+        fetch("/form-contacto", {
+            method: "POST",
+            body: new URLSearchParams(new FormData(formulario)),
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
             }
-        }
-        xhr.send(new URLSearchParams(new FormData(formulario)).toString());
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log("Formulario enviado");
+                formulario.reset();
+            }
+        })
+        .catch(error => {
+            console.error("Error al enviar el formulario:", error);
+        });
 
-        formulario.reset();
+
     });
 });
 
