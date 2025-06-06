@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Cooper Hewitt';
-    src: url('./fonts/CooperHewitt-Light.woff') format('woff'),
-    url('./fonts/CooperHewitt-Thin.woff') format('woff');
+    src: url('../fonts/CooperHewitt-Light.woff') format('woff'),
+    url('../fonts/CooperHewitt-Thin.woff') format('woff');
 }
 
 :root {
@@ -637,6 +637,7 @@ span+span {
 }
 
 .card--proyecto-content p {
+    font-size: 1.4rem;
     color: var(--light-grey);
     margin-bottom: 1.5rem;
     line-height: 1.6;
